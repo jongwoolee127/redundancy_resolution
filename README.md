@@ -9,10 +9,11 @@ By setting the current directory as the same as [requirements.txt](requirements.
     python3 -m venv .venv 
 ```
 By setting the virtual enviroment's name as `.venv`, VScode will automatically recognize the `venv` package and will activate the virtual environment. 
-Once you have done this and open the terminal window *inside* VSCode, there will be `(.venv)` added in front of your command line (If it fails to automatically activate the virtual environment, run:
+Once you have done this and open the terminal window *inside* VSCode, there will be `(.venv)` added in front of your command line. If it fails to automatically activate the virtual environment, run:
 ```
     source .venv/bin/activate
-```). If that is the case, your are ready to run `pip`. 
+```
+Now you are ready to run `pip`: 
 ```
     pip3 install -r requirements.txt
 ```
