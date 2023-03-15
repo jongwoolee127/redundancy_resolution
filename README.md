@@ -28,4 +28,4 @@ If VSCODE fails to automatically activate the virtual environment, run:
     source .venv/bin/activate
 ```
 NOTE2]
-If it fails to install list of packages in requirement.txt, and if you see error relevant to Python version, check whether your python3 version is compatible. If not, remove and recreate the virtual environment with right python version. 
+Make sure the version of your python3 is compatible with the list of packages to be installed in requirements.txt](requirements.txt). 
