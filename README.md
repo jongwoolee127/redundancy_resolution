@@ -9,10 +9,7 @@ By setting the current directory as the same as [requirements.txt](requirements.
     python3 -m venv .venv 
 ```
 By setting the virtual enviroment's name as `.venv`, VScode will automatically recognize the `venv` package and will activate the virtual environment. 
-Once you have done this and open the terminal window *inside* VSCode, there will be `(.venv)` added in front of your command line. If it fails to automatically activate the virtual environment, run:
-```
-    source .venv/bin/activate
-```
+Once you have done this and open the terminal window *inside* VSCode, there will be `(.venv)` added in front of your command line. 
 Now you are ready to run `pip`: 
 ```
     pip3 install -r requirements.txt
@@ -24,3 +21,11 @@ Once the python packages are installed without any problem, we need to check whe
     python3 ./ex_joint_imp.py
 ```
 And you should see a 2-DOF planar robot with a first-order joint-space impedance controller.
+
+NOTE1]
+If VSCODE fails to automatically activate the virtual environment, run:
+```
+    source .venv/bin/activate
+```
+NOTE2]
+If it fails to install list of packages in requirement.txt, and if you see error relevant to Python version, check whether your python3 version is compatible. If not, remove and recreate the virtual environment with right python version. 
