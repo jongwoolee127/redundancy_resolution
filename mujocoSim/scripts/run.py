@@ -1,17 +1,27 @@
 import sys
+import os
 import numpy as np
 import mujoco
 import mujoco_viewer
 
-sys.path += [ "../modules", "../controller"] 
+# Get the current working directory of the script
+cwd = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the relative paths
+modules_path = os.path.join(cwd, '..', 'modules')
+controllers_path = os.path.join(cwd, '..', 'controller')
+
+# Add the relative paths to the sys.path list
+sys.path.append(modules_path)
+sys.path.append(controllers_path)
 
 from utils  import min_jerk_traj
 from joint_imp import joint_imp
 
 # Call the xml model file + data for MuJoCo
-dir_name   = '../robot_model/'
+dir_name   =  os.path.join(cwd, '..', 'robot_model')
 robot_name = 'double_pendulum.xml'
-model = mujoco.MjModel.from_xml_path( dir_name + robot_name )
+model = mujoco.MjModel.from_xml_path( os.path.join(dir_name, robot_name) ) 
 data  = mujoco.MjData( model )
 
 # Create the viewer object
